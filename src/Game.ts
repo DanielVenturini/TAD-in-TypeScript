@@ -1,4 +1,4 @@
-<reference path = "ArrayList"
+/// <reference path = "ArrayList.ts" />
 
 class Game{
   private scenes: ArrayList
@@ -7,8 +7,7 @@ class Game{
 
   constructor(){
     this.currentScene = 0
-    this.number = 0
-
   }
 
+  
 }
