@@ -9,5 +9,4 @@ class Game{
     this.currentScene = 0
   }
 
-  
 }
