@@ -15,8 +15,8 @@
         "description": "Faca de ossos em forma de caveira",
         "txtPositivo": "",
         "txtNegative": ["Não pode fazer isso","Voçê conseguiu matar uma cobra, mas morreu picado pelas otras cobras","Voçê esfaqueou a mumia, mas ela ja esta morta, então ela quebrou seu pescoço"],
-        "commandCorrect": ["get ISQUEIRO","use ISQUEIRO with TOCHA"],
-        "targetScene": [2 ,3],
+        "commandCorrect": ["get ISQUEIRO"],
+        "targetScene": [],
         "resorved": 0,
         "got": 0
     },
@@ -26,8 +26,8 @@
         "description": "Iqueiro de prata",
         "txtPositivo": ["O Isqueiro esta no inventario","Voçê iluminou o ambiente revelando um 3 caminho"],
         "txtNegative": "Não pode fazer isso",
-        "commandCorrect": ["get ISQUEIRO","use ISQUEIRO with TOCHA"],
-        "targetScene": [2 ,3],
+        "commandCorrect": ["get ISQUEIRO",""],
+        "targetScene": [],
         "resorved": 0,
         "got": 0
     },
@@ -43,27 +43,52 @@
         "got": 0
     },
 
-    {   "id": 4,
+    {   "id": 5,
         "name": "Flauta",
         "description": "Flauta de osso entalhada para se parecer com uma serpente",
         "txtPositivo": [""],
         "txtNegative": "Não pode fazer isso",
-        "commandCorrect": ["get ISQUEIRO","use ISQUEIRO with TOCHA"],
-        "targetScene": [2 ,3],
+        "commandCorrect": ["get ISQUEIRO",""],
+        "targetScene": [],
         "resorved": 0,
         "got": 0
     },
 
-    {   "id": 3,
-        "name": "Dicionario",
-        "description": "Iqueiro de prata",
-        "txtPositivo": ["O Isqueiro esta no inventario","Voçê iluminou o ambiente revelando um 3 caminho"],
+    {   "id": 6,
+        "name": "PERGAMINHO",
+        "description": "Pergaminho dourado, muito bonito para estar desprotegido",
+        "txtPositivo": [""],
         "txtNegative": "Não pode fazer isso",
-        "commandCorrect": ["get ISQUEIRO","use ISQUEIRO with TOCHA"],
-        "targetScene": [2 ,3],
+        "commandCorrect": [""],
+        "targetScene": [],
+        "resorved": 0,
+        "got": 0
+    },
+
+    {   "id": 7,
+        "name": "SARCOFAGO",
+        "description": "Sarcofago de ouro de um grande Faraó",
+        "txtPositivo": [""],
+        "txtNegative": "",
+        "commandCorrect": [""],
+        "targetScene": [8],
+        "resorved": 0,
+        "got": 0
+    },
+
+    {   "id": 8,
+        "name": "PICARETA",
+        "description": "Picareta de metal, super pesada mas excelente para minerar pedras preciosas",
+        "txtPositivo": [""],
+        "txtNegative": "",
+        "commandCorrect": [""],
+        "targetScene": [8],
         "resorved": 0,
         "got": 0
     }
+
+
+    
 
     
 ]
