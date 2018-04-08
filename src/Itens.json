@@ -85,5 +85,49 @@
         "targetScene": [8],
         "resorved": 0,
         "got": 0
-    }  
+    },  
+
+    {   "id": 9,
+        "name": "CAMINHO 1",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seje Burro",
+        "commandCorrect": ["go in CAMINHO 1"],
+        "targetScene": [],
+        "resorved": 0,
+        "got": 0
+    },  
+
+    {   "id": 10,
+        "name": "CAMINHO 2",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seje Burro",
+        "commandCorrect": ["go in CAMINHO 2"],
+        "targetScene": [],
+        "resorved": 0,
+        "got": 0
+    },  
+
+    {   "id": 11,
+        "name": "CAMINHO 3",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seje Burro",
+        "commandCorrect": ["go in CAMINHO 2"],
+        "targetScene": [],
+        "resorved": 0,
+        "got": 0
+    },  
+
+    {   "id": 12,
+        "name": "CAMINHO 4",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seje Burro",
+        "commandCorrect": ["go in CAMINHO 4"],
+        "targetScene": [],
+        "resorved": 0,
+        "got": 0
+    }
 ]

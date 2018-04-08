@@ -7,6 +7,6 @@ var getObject = function (err, data) {
         throw err;
     }
     var arrayObject = JSON.parse(data);
-    console.log("File: ", arrayObject[1].name);
+    console.log("File: ", arrayObject[0].object[0].name);
 }
-fs.readFile('./src/Itens.json', getObject)
+fs.readFile('./src/Scenes.json', getObject)
