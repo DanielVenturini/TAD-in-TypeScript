@@ -2,60 +2,7 @@
     {   "id": 0,
         "title": "Cena Principal",
         "description": "EM sua expedição pelo Egito, o arqueólogo Indio Ana Jones, sem querer, caiu dentro de uma antiga tumba do faraó. Por ser arqueólogo, ele sabe que a única saída desta tumba é por cima. Então Mensah terá que descobrir, dentre as várias passagens da pirâmide, qual deles dão na saída. Por esquecer sua mochila no acampamento, Mensah tem apenas em seus bolsos um ISQUEIRO, uma FACA, e um DICIONÁRIO Egito/Brasil.",
-        "object": [
-            {   "id": 1,
-                "name": "Isqueiro",
-                "description": "ISQUEIRO de prata",
-                "txtPositivo": "",
-                "txtNegative": "Não pode fazer isso",
-                "commandCorrect": "",
-                "targetScene": 0,
-                "resorved": 0,
-                "got": 0
-            },
-
-            {   "id": 2,
-                "name": "Faca",
-                "description": "Faca de ossos em forma de caveira",
-                "txtPositivo": "",
-                "txtNegative": ["Não pode fazer isso","Voçê conseguiu matar uma cobra, mas morreu picado pelas otras cobras","Voçê esfaqueou a mumia, mas ela ja esta morta, então ela quebrou seu pescoço"],
-                "commandCorrect": ["get ISQUEIRO"],
-                "targetScene": [],
-                "resorved": 0,
-                "got": 0
-            },
-
-            {   "id": 3,
-                "name": "Dicionario",
-                "description": "Iqueiro de prata",
-                "txtPositivo": ["O Isqueiro esta no inventario","Voçê iluminou o ambiente revelando um 3 caminho"],
-                "txtNegative": "Não pode fazer isso",
-                "commandCorrect": ["get ISQUEIRO",""],
-                "targetScene": [],
-                "resorved": 0,
-                "got": 0
-            },
-            {   "id": 9,
-                "name": "CAMINHO 1",
-                "description": "Caminho Assustador",
-                "txtPositivo": [""],
-                "txtNegative": "Não seje Burro",
-                "commandCorrect": ["go in CAMINHO 1"],
-                "targetScene": [],
-                "resorved": 0,
-                "got": 0
-            },
-            {   "id": 10,
-                "name": "CAMINHO 2",
-                "description": "Caminho Assustador",
-                "txtPositivo": [""],
-                "txtNegative": "Não seje Burro",
-                "commandCorrect": ["go in CAMINHO 2"],
-                "targetScene": [],
-                "resorved": 0,
-                "got": 0
-            }
-        ]
+        "object": []     
     },
 
     {   "id": 1,
