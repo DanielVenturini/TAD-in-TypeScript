@@ -18,7 +18,7 @@
         "txtDead": ["Voce matou uma cobra, mas foi picado por outras 100 cobras", "Nao se pode matar algo que ja esta morto. Ela apenas quebrou seu pescoço"],
         "commandCorrect": [],
         "commandDead": ["use faca with cobra", "use faca with"],
-        "targetScene": [],
+        "targetScene": 0,
         "resorved": 0,
         "got": 0
     },
@@ -30,7 +30,7 @@
         "txtDead": [],
         "commandCorrect": ["use dicionario with placa1", "use dicionario with placa2", "USE DICIONARIO WITH RÚBRICA"],
         "commandDead": [],
-        "targetScene": [],
+        "targetScene": 0,
         "resorved": 0,
         "got": 0
     },
@@ -54,7 +54,7 @@
         "txtDead": [],
         "commandCorrect": [],
         "commandDead": [],
-        "targetScene": [],
+        "targetScene": 0,
         "resorved": 0,
         "got": 0
     },
@@ -66,7 +66,7 @@
         "txtDead": [],
         "commandCorrect": ["use flauta with cobra"],
         "commandDead": [],
-        "targetScene": [],
+        "targetScene": 0,
         "resorved": 0,
         "got": 0
     },
@@ -78,7 +78,7 @@
         "textDead": ["Um alçapão se abriu, fazendo voce cair num monte de espinhos. VOCE MORREU."],
         "commandCorrect": [],
         "commandDead": ["use alavanca"],
-        "targetScene": [],
+        "targetScene": 0,
         "resorved": 0,
         "got": 0
     },
@@ -90,7 +90,7 @@
         "txtDead": [],
         "commandCorrect": ["open sarcofago"],
         "commandDead": [],
-        "targetScene": [],
+        "targetScene": 0,
         "resorved": 0,
         "got": 0
     },
@@ -102,7 +102,7 @@
         "txtDead": [],
         "commandCorrect": ["use tocha"],
         "commandDead": [],
-        "targetScene": [],
+        "targetScene": 0,
         "resorved": 0,
         "got": 0
     },
@@ -114,7 +114,7 @@
         "txtDead": [],
         "commandCorrect": ["GET PERGAMINHO"],
         "commandDead": [],
-        "targetScene": [],
+        "targetScene": 0,
         "resorved": 0,
         "got": 0
     },
@@ -125,18 +125,128 @@
         "txtPositivo": [""],
         "txtNegative": "",
         "commandCorrect": [""],
-        "targetScene": [8],
+        "targetScene": 0,
         "resorved": 0,
         "got": 0
     },  
 
-    {   "id": 9,
+    {   "id": 12,
         "name": "CAMINHO 1",
         "description": "Caminho Assustador",
         "txtPositivo": [""],
-        "txtNegative": "Não seje Burro",
+        "txtNegative": "Não seja Burro",
         "commandCorrect": ["go in CAMINHO 1"],
-        "targetScene": [],
+        "targetScene": 1,
+        "resorved": 0,
+        "got": 0
+    },
+
+    {   "id": 13,
+        "name": "CAMINHO 2",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seja Burro",
+        "commandCorrect": ["go in CAMINHO 2"],
+        "targetScene": 2,
+        "resorved": 0,
+        "got": 0
+    },
+    
+    {   "id": 14,
+        "name": "CAMINHO 3",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seja Burro",
+        "commandCorrect": ["go in CAMINHO 3"],
+        "targetScene": 2,
+        "resorved": 0,
+        "got": 0
+    },
+
+    {   "id": 15,
+        "name": "CAMINHO 4",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seja Burro",
+        "commandCorrect": ["go in CAMINHO 4"],
+        "targetScene": 3,
+        "resorved": 0,
+        "got": 0
+    },
+    
+    {   "id": 16,
+        "name": "CAMINHO 5",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seja Burro",
+        "commandCorrect": ["go in CAMINHO 5"],
+        "targetScene": 3,
+        "resorved": 0,
+        "got": 0
+    },
+    
+    {   "id": 17,
+        "name": "CAMINHO 6",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seja Burro",
+        "commandCorrect": ["go in CAMINHO 6"],
+        "targetScene": 5,
+        "resorved": 0,
+        "got": 0
+    },
+
+    {   "id": 18,
+        "name": "CAMINHO 7",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seja Burro",
+        "commandCorrect": ["go in CAMINHO 7"],
+        "targetScene": 6,
+        "resorved": 0,
+        "got": 0
+    },
+
+    {   "id": 19,
+        "name": "CAMINHO 8",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seja Burro",
+        "commandCorrect": ["go in CAMINHO 8"],
+        "targetScene": 6,
+        "resorved": 0,
+        "got": 0
+    },
+
+    {   "id": 20,
+        "name": "CAMINHO 9",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seja Burro",
+        "commandCorrect": ["go in CAMINHO 9"],
+        "targetScene": 7,
+        "resorved": 0,
+        "got": 0
+    },
+
+    {   "id": 21,
+        "name": "CAMINHO 10",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seja Burro",
+        "commandCorrect": ["go in CAMINHO 10"],
+        "targetScene": 8,
+        "resorved": 0,
+        "got": 0
+    },
+
+    {   "id": 22,
+        "name": "CAMINHO 11",
+        "description": "Caminho Assustador",
+        "txtPositivo": [""],
+        "txtNegative": "Não seja Burro",
+        "commandCorrect": ["go in CAMINHO 11"],
+        "targetScene": 9,
         "resorved": 0,
         "got": 0
     }
