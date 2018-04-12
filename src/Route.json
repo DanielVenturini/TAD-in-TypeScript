@@ -1,30 +1,19 @@
 [
     {   "id": 0,
-        "name": "caminho 1",
-        "description": "Caminho Assustador",     
-        "txtNegative": "Não seja Burro",
-        "commandCorrect": ["go in CAMINHO 1"],
+        "name": "caminho revelado",
         "targetScene": 1
     },
     {   "id": 1,
-        "name": "caminho 2",
-        "description": "Caminho Assustador",
-        "txtNegative": "Não seja Burro",
-        "commandCorrect": ["go in CAMINHO 2"],
+        "name": "saida",
         "targetScene": 2    
+        
     },
     {   "id": 2,
-        "name": "caminho 3",
-        "description": "Caminho Assustador",
-        "txtNegative": "Não seja Burro",
-        "commandCorrect": ["go in CAMINHO 3"],
+        "name": "caminho 1",
         "targetScene": 2
     },
     {   "id": 3,
-        "name": "caminho 4",
-        "description": "Caminho Assustador",
-        "txtNegative": "Não seja Burro",
-        "commandCorrect": ["go in CAMINHO 4"],
+        "name": "caminho 2",
         "targetScene": 3
     },
     {   "id": 4,
