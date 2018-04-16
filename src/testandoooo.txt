@@ -1,1 +1,0 @@
-Aqui vai um pequenno codigo de teste para imprimeir tentando ler arquivos.

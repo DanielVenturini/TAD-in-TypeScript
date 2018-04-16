@@ -1,15 +1,19 @@
-/// <reference path = "ArrayList.ts" />
 /// <reference path = "Scene.ts" />
 
-
+var readline = require('readline-sync');
+var fs = require('fs');
 
 class Game{
-  private scenes: ArrayList
-  private objects: ArrayList
-  private currentScene: number
+  scenes: 
 
+
+   
   constructor(){
-    this.currentScene = 0
+
+    var game = JSON.parse(fs.readFileSync('./src/game.json', 'utf8'));
+    this.scenes = game.cenas
+
+    
   }
   
 }
