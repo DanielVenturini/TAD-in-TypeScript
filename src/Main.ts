@@ -88,6 +88,8 @@ while(jogo){
 
             case "info": {
                 info()
+=======
+>>>>>>> 9d074ebcc09a8dae798e74004f911418e43b4aae
             break
             }
 
