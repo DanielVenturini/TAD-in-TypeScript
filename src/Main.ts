@@ -318,5 +318,7 @@ function info(){
     "\tgo in SAIDA\n" +
     "\topen OBJETO\n" +
     "\tdeliver\n\n"
+
+    
 )
 }
