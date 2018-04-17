@@ -14,10 +14,11 @@ while(jogo){
 
     console.log(game.cenas[x].description)
     turno = true
+    console.log("Cena atual ---- " + x)
     // dois while, um para interagir na cena, e outro para carregar a outra cena
 
     while(turno){
-        
+
         var comandoUsuario = rl.prompt("> ");
         var comando = comandoUsuario.toLowerCase().split(" ")
        // console.log(comando)
@@ -37,24 +38,24 @@ while(jogo){
                 
                 if(estaNoInventario()){
                     
-                    if(estaNaCena(3) != -1){
+                    if(comando[1] == "tocha" && x == 4){
+                        game.cenas[x].resolved[0] = true
+                        console.log(game.cenas[x])
+                        console.log(game.objetos[8].txtPositivo[0])
+                        break
+                    }
+                    else if(comando[1] == "alavanca" && x == 4 && (estaNaCena(1) != -1)){
+                        console.log(game.objetos[6].textDead[0])
+                        gameOver()
+                        break
+                    }
+                    else if(comando[3] == "with" && estaNaCena(3) != -1){
+                        console.log("aki")
                         comparaFraseUsuario()
                         continue
                     }
                 }
-                else if(comando[1] == "tocha" && x == 4 && estaNoInventario()){
-                    game.cenas[x].resolved[0] = true
-                    console.log(game.objetos[8].txtPositivo[0])
-                }
-                else if(comando[1] == "alavanca" && x == 4 && (estaNaCena(1) != -1)){
-                    console.log(game.objetos[6].textDead[0])
-                    gameOver()
-                }
-
-                else{
-                    comandoErro()
-                }            
-
+                comandoErro()
             break
             }
 
@@ -78,7 +79,6 @@ while(jogo){
                         turno = false
                     }
                 }
-
                 else{
                     comandoErro()
                 }
@@ -87,7 +87,7 @@ while(jogo){
             }
 
             case "info": {
-
+                info()
             break
             }
 
@@ -106,7 +106,6 @@ while(jogo){
                         if(testaFraseCorreta(pos)){
                             game.cenas[x].resolved[0] = false //nao fugir ação
                         }
-
                     }
                     if(comando[1] == "jarro" && x == 3){
                         pos = achaObjeto(comando[1])
@@ -119,10 +118,7 @@ while(jogo){
                         if(testaFraseCorreta(pos)){
                             resolved(true,0)
                         }
-
                     }
-
-
                 }
                 else{
                     comandoErro()
@@ -306,4 +302,17 @@ function comandoErro(){
 
 function resolved(bool, posicao){
     game.cenas[bool].resolved[posicao] = true
+}
+
+
+function info(){
+    console.log("\n\ncomandos validos:\n\n"+
+    "\tuse OBJETO with OBJETO\n" +
+    "\tget OBJETO\n" +
+    "\tuse OBJETO\n" +
+    "\tAÇÃO ex: PULAR\n" +
+    "\tgo in SAIDA\n" +
+    "\topen OBJETO\n" +
+    "\tdeliver\n\n"
+)
 }
