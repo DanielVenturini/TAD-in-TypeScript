@@ -7,7 +7,7 @@
 
         {   "id": 0,
             "title": "cena inicial",
-            "description": "\tEm sua expedição pelo Egito, o arqueólogo Indio Ana Jones, sem querer, caiu dentro de uma antiga tumba do faraó. Por ser arqueólogo, ele sabe que a única saída desta tumba é por cima. Então Indio Ana Jones terá que descobrir, dentre as várias caminhos da pirâmide, qual deles dão na saída. Por esquecer sua mochila no acampamento, Indio Ana Jones tem apenas em seus bolsos um ISQUEIRO, uma FACA, e um DICIONÁRIO de Egipcio/Portugues.\n\tO clima está frio e Indio Ana Jones está assustado, pois sabe que nesta pirâmide se encontra uma múmia real enterrada em seus caminhos. Observando ao redor, Indio Ana Jones consegue enxergar uma TOCHA, porém ela está apagada. Com muita sorte, apesar de estar trancado na pirâmide, Indio Ana Jones caiu em cima de uma barra de OURO. Na sala da pirâmide onde Indio Ana Jones está caído está muito Escuro, porém Indio Ana Jones consegue enxergar 2 saidas: a SAIDA1 ou SAIDA2",
+            "description": "\n\tEm sua expedição pelo Egito, o arqueólogo Indio Ana Jones, sem querer, caiu dentro de uma antiga tumba do faraó. Por ser arqueólogo, ele sabe que a única saída desta tumba é por cima. Então Indio Ana Jones terá que descobrir, dentre as várias caminhos da pirâmide, qual deles dão na saída. Por esquecer sua mochila no acampamento, Indio Ana Jones tem apenas em seus bolsos um ISQUEIRO, uma FACA, e um DICIONÁRIO de Egipcio/Portugues.\n\tO clima está frio e Indio Ana Jones está assustado, pois sabe que nesta pirâmide se encontra uma múmia real enterrada em seus caminhos. Observando ao redor, Indio Ana Jones consegue enxergar uma TOCHA, porém ela está apagada. Com muita sorte, apesar de estar trancado na pirâmide, Indio Ana Jones caiu em cima de uma barra de OURO. Na sala da pirâmide onde Indio Ana Jones está caído está muito Escuro, porém Indio Ana Jones consegue enxergar 2 saidas: a SAIDA1 ou SAIDA2",
             "object": ["tocha", "ouro", "mim"],
             "action":[],
             "resolved": [true, true, false],
@@ -16,7 +16,7 @@
     
         {   "id": 1,
             "title": "cena 1",
-            "description": "Ao entrar nesta sala, Indio Ana Jones se deparou com duas placas em cima das duas saidas. Em cima da SAIDA1 esta escrito na PLACA1 SAOB ED, e em cima da SAIDA2 na PLACA2 esta escrito MIUR UED.",
+            "description": "\n\tAo entrar nesta sala, Indio Ana Jones se deparou com duas placas em cima das duas saidas. Em cima da SAIDA1 esta escrito na PLACA1 SAOB ED, e em cima da SAIDA2 na PLACA2 esta escrito MIUR UED.",
             "object": ["placa1", "placa2"],
             "action": [],
             "resolved": [true, true, false],
@@ -25,7 +25,7 @@
     
         {   "id": 2,
             "title": "cena 2",
-            "description": "Ao entrar nesta sala, Indio Ana Jones percebe uma descida no piso. Pouco após, ele ouve um leve barulho. Então um barulho maior. Indio Ana Jones olha para baixo e percebe que ele pisou em um bloco que provavelmente é uma armadilha. Ao tirar o pé do bloco, o corredor a sua frente é inundado por uma chuva de flechas de parede a parede. Indio Ana Jones sabe que tem que prosseguir, então ele lembra que há apenas um jeito de passar pelo corredor e conseguir sobrevive seria RASTEJAR, CORRER, IR_PULANDO, ou GRITAR_ALTO.",
+            "description": "\n\tAo entrar nesta sala, Indio Ana Jones percebe uma descida no piso. Pouco após, ele ouve um leve barulho. Então um barulho maior. Indio Ana Jones olha para baixo e percebe que ele pisou em um bloco que provavelmente é uma armadilha. Ao tirar o pé do bloco, o corredor a sua frente é inundado por uma chuva de flechas de parede a parede. Indio Ana Jones sabe que tem que prosseguir, então ele lembra que há apenas um jeito de passar pelo corredor e conseguir sobrevive seria RASTEJAR, CORRER, IR_PULANDO, ou GRITAR_ALTO.",
             "object": [],
             "action":["CORRER", "AGACHAR", "IR_PULANDO", "RASTEJANDO", "GRITAR_ALTO"],
             "resolved": [false, false, false],
@@ -34,7 +34,7 @@
 
         {   "id": 3,
             "title": "cena 3",
-            "description": "Depois de tanto andar, Indio Ana Jonas chega em mais uma camara. Nesta, ele observa caida no chao uma FLAUTA. Um pouco a frente, em cima de uma coluna de pedra, ele vê um JARRO de barro vazio, um pouco pesado. Logo a frente, ele vê uma saida, o caminho1",
+            "description": "\n\tDepois de tanto andar, Indio Ana Jonas chega em mais uma camara. Nesta, ele observa caida no chao uma FLAUTA. Um pouco a frente, em cima de uma coluna de pedra, ele vê um JARRO de barro vazio, um pouco pesado. Logo a frente, ele vê uma saida, o caminho1",
             "object": ["flauta", "jarro"],
             "action":[],
             "resolved": [true, true, false],
@@ -43,7 +43,7 @@
     
         {   "id": 4,
             "title": "cena 4",
-            "description": "Após entrar na passagem secreta, ele descobre que não consegue enchergar quase nada, apenas uma ALAVANCA que reflete o pouco de luz que esta entrando no ambiente",
+            "description": "\n\tApós entrar na passagem secreta, ele descobre que não consegue enchergar quase nada, apenas uma ALAVANCA que reflete o pouco de luz que esta entrando no ambiente",
             "object": ["tocha","alavanca"],
             "action":[],
             "resolved": [false, false, false],
@@ -52,7 +52,7 @@
     
         {   "id": 5,
             "title": "cena 5",
-            "description": "Ao entrar na camera ele se depara com o SARCOFAGO do faraó Anubiks. Na lateral do Sarcófago, há uma RUBRICA grafada em Egípcio. A tampa do SARCOFAGO parece esta entre aberta com uma luz violeta que esta saindo de dentro",
+            "description": "\n\tAo entrar na camera ele se depara com o SARCOFAGO do faraó Anubiks. Na lateral do Sarcófago, há uma RUBRICA grafada em Egípcio. A tampa do SARCOFAGO parece esta entre aberta com uma luz violeta que esta saindo de dentro",
             "object": ["sarcofago", "ruby", "rubrica"],
             "action":[],
             "resolved": [false, false, false],
@@ -61,7 +61,7 @@
     
         {   "id": 6,
             "title": "cena 6",
-            "description": "Ao entrar nesta nova camera ele percebe logo de cara, q no centro do ambiente se encontra um PERGAMINHO dourado relusente em cima de um pedestal e logo atraz uma SAIDA para aquela sala",
+            "description": "\n\tAo entrar nesta nova camera ele percebe logo de cara, q no centro do ambiente se encontra um PERGAMINHO dourado relusente em cima de um pedestal e logo atraz uma SAIDA para aquela sala",
             "object": ["pergaminho","cobra"],
             "action":[],
             "resolved": [true, false, false],
@@ -70,7 +70,9 @@
     
         {   "id": 7,
             "title": "cena 7",
-            "description": "Depois de tamtas desventuras que encontrou durante o caminho, o aqueologo Indio Ana Jones se depara com a SAIDA, mas antes de dar os primeiro passos para sua liberdade e ouve um ruivo de raiva logo atras dele, uma MUMIA aparece atras dele e vem em sua direção, ele fica em duvida do que fazer se é melhor CORRER,  usar sua FACA ou alguma coisa que tenha no inventario para alcalmar a MUMIA ",
+
+            "description": "\n\tDepois de tamtas desventuras que encontrou durante o caminho, o aqueologo Indio Ana Jones se depara com a SAIDA, mas antes de dar os primeiro passos para sua liberdade e ouve um ruivo de raiva logo atras dele, uma MUMIA aparece furiosa atras dele e vem em sua direção, ele pensa sen tem alguma coisa no inventario que ele possa utilizar",
+
             "object": ["mumia"],
             "action":[],
             "resolved": [false, false, false],
@@ -79,7 +81,7 @@
     
         {   "id": 8,
             "title": "cena 8",
-            "description": "Apos finalmente sair da tumba, ele se depara com ladroes de tumbas nazistas, onde o arqueologo é capturado e amarrado em cima do prota-mala, sera que nosso Heroi vai escapar de mais uma enrascada",
+            "description": "\n\tApos finalmente sair da tumba, ele se depara com ladroes de tumbas nazistas, onde o arqueologo é capturado e amarrado em cima do prota-mala, sera que nosso Heroi vai escapar de mais uma enrascada",
             "object": [],
             "action":[],
             "resolved": [false, false, false],
