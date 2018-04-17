@@ -5,7 +5,7 @@ var game = JSON.parse(fs.readFileSync('./src/game.json', 'utf8'));
 
 const rl = readline
 
-var x = 0      //cena atual
+var x = 4      //cena atual
 var i = 0
 var pos = 0
 
@@ -16,7 +16,7 @@ while(jogo){
 
     console.log(game.cenas[x].description)
     turno = true
-    console.log("Cena atual ---- " + x)
+    
     // dois while, um para interagir na cena, e outro para carregar a outra cena
 
     while(turno){
@@ -30,33 +30,34 @@ while(jogo){
                printInventario()
                break
            }
-
             case "exit": {
                 jogo = false
                 turno = false
                 break
             }
+
             case "use": {
                 
                 if(estaNoInventario()){
                     
                     if(comando[1] == "tocha" && x == 4){
-                        game.cenas[x].resolved[0] = true
+                        //game.cenas[x].resolved[0] = true
+                        resolved(true,0)
                         console.log(game.cenas[x])
                         console.log(game.objetos[8].txtPositivo[0])
                         break
                     }
-                    else if(comando[1] == "alavanca" && x == 4 && (estaNaCena(1) != -1)){
-                        console.log(game.objetos[6].textDead[0])
-                        gameOver()
-                        break
-                    }
-                    else if(comando[3] == "with" && estaNaCena(3) != -1){
-                        console.log("aki")
+                    else if(comando[3] == "with" && estaNaCena(3) != -1){                       
                         comparaFraseUsuario()
                         continue
                     }
                 }
+                else if(comando[1] == "alavanca" && x == 4){
+                    console.log(game.objetos[6].textDead[0])
+                    gameOver()
+                    break
+                }
+                
                 comandoErro()
             break
             }
@@ -108,7 +109,9 @@ while(jogo){
                         pos = achaObjeto(comando[1])
                         
                         if(testaFraseCorreta(pos)){
-                            game.cenas[x].resolved[0] = false //nao fugir ação
+                            //game.cenas[x].resolved[0] = false //nao fugir ação
+                            resolved(false,0)
+
                         }
                     }
                     if(comando[1] == "jarro" && x == 3){
@@ -185,8 +188,8 @@ while(jogo){
 
                 if(x == 6){
                     console.log("As serpentes ficaram atordoadas com o barulho, fazendo assim que Indio Ana Jones pudesse ir saida")
-                    game.cenas[x].resolved[0] = true
-
+                    //game.cenas[x].resolved[0] = true
+                    resolved(true,0)                    
                 }else{
                     console.log("Indio Ana Jones escapou por pouco")
                 }
@@ -265,7 +268,6 @@ function comparaFraseUsuario(){
 
 function testaFraseCorreta(pos){
 
-    
     for(i = 0; i < game.objetos[pos].commandCorrect.length; i++){
         if(comandoUsuario == game.objetos[pos].commandCorrect[i]){
             console.log(game.objetos[pos].txtPositivo[i])
@@ -305,7 +307,7 @@ function comandoErro(){
 }
 
 function resolved(bool, posicao){
-    game.cenas[bool].resolved[posicao] = true
+    game.cenas[x].resolved[posicao] = bool
 }
 
 
