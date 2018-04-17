@@ -17,21 +17,25 @@ while(jogo){
     console.log(game.cenas[x].description)
     turno = true
     
+    if( x == 8 ){
+        creditos()
+        jogo = false
+        turno = false
+        break
+    }
     // dois while, um para interagir na cena, e outro para carregar a outra cena
     while(turno){
 
+
         var comandoUsuario = rl.prompt("> ");
         var comando = comandoUsuario.toLowerCase().split(" ")
-    
         
-
-       // console.log(comando)
-        
-       switch(comando[0]){
-           case "inventario": {
-               printInventario()
-               break
-           }
+            // console.log(comando)
+        switch(comando[0]){
+            case "inventario": {
+                printInventario()
+                break
+            }
 
             case "exit": {
                 jogo = false
@@ -67,7 +71,7 @@ while(jogo){
             }
 
             case "go": {
-                 
+                
                 if(comando[2] == "saida1" || comando[2] == "saida"){                    
                     if(game.cenas[x].resolved[0] == true){
                         x = game.cenas[x].exit[0]
@@ -221,12 +225,18 @@ while(jogo){
 
 
             else{
-              comandoErro()
+            comandoErro()
             }
 
             break
 
         }
+
+    
+
+
+
+       
     }
 }
 
@@ -342,4 +352,15 @@ function info(){
     "\topen OBJETO\n" +
     "\tdeliver\n\n"
 )
+}
+function creditos(){
+    console.log("\n\nAutores e desenvolvedores:")
+    console.log("\tDaniel e Luiz")
+    console.log("\nCodico do jogo:")
+    console.log("\nhttps://github.com/DanielVenturini/TAD-in-TypeScript")
+    
+    console.log("\n\nObrigado por zerar o jogo\n\n")
+
+    console.log("\nFIM\n\n")
+    
 }
