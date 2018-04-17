@@ -4,9 +4,9 @@ var fs = require('fs');
 var game = JSON.parse(fs.readFileSync('./src/game.json', 'utf8'));
 
 const rl = readline
-var x = 4       //cena atual
-var i = 0
 
+var x = 0      //cena atual
+var i = 0
 var pos = 0
 
 var jogo = true
@@ -89,8 +89,6 @@ while(jogo){
             }
 
             case "info": {
-            
-
 
 
             break
@@ -167,7 +165,9 @@ while(jogo){
                     testaFraseCorreta(pos)
                 }
                 else {
-                    console.log(comandoErro())
+
+                comandoErro()
+
                 }
                 break
             }
@@ -264,12 +264,14 @@ function comparaFraseUsuario(){
             }
         }
     }    
-    //comandoErro() 
+
+    comandoErro() 
+
     return -1
 }
 
 function testaFraseCorreta(pos){
-    //console.log("==========" + posOC)
+
     
     for(i = 0; i < game.objetos[pos].commandCorrect.length; i++){
         if(comandoUsuario == game.objetos[pos].commandCorrect[i]){
