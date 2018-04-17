@@ -89,7 +89,9 @@ while(jogo){
             }
 
             case "info": {
+
                 info()
+                
             break
             }
 
