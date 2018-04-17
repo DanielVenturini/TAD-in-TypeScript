@@ -17,19 +17,27 @@ while(jogo){
     console.log(game.cenas[x].description)
     turno = true
     
-    // dois while, um para interagir na cena, e outro para carregar a outra cena
+    if( x == 8 ){
+        creditos()
+        jogo = false
+        turno = false
+        break
+    }
 
+    // dois while, um para interagir na cena, e outro para carregar a outra cena
     while(turno){
+
 
         var comandoUsuario = rl.prompt("> ");
         var comando = comandoUsuario.toLowerCase().split(" ")
-       // console.log(comando)
         
+
        switch(comando[0]){
            case "inventario": {
                printInventario()
                break
            }
+
             case "exit": {
                 jogo = false
                 turno = false
@@ -47,8 +55,14 @@ while(jogo){
                         console.log(game.objetos[8].txtPositivo[0])
                         break
                     }
+
                     else if(comando[3] == "with" && estaNaCena(3) != -1){                       
+
                         comparaFraseUsuario()
+                        if( comando[1] == "isqueiro" && comando[3] == "tocha"){
+                            game.cenas[x].resolved[2] = true
+                        }
+
                         continue
                     }
                 }
@@ -63,7 +77,7 @@ while(jogo){
             }
 
             case "go": {
-                 
+                
                 if(comando[2] == "saida1" || comando[2] == "saida"){                    
                     if(game.cenas[x].resolved[0] == true){
                         x = game.cenas[x].exit[0]
@@ -79,6 +93,7 @@ while(jogo){
                 else if(comando[2] == "saida3"){
                     if(game.cenas[x].resolved[2]){
                         x = game.cenas[x].exit[2]
+                        console.log("akii")
                         turno = false
                     }
                 }
@@ -171,16 +186,15 @@ while(jogo){
             }
 
             default:
-
-            //CORRER", "AGACHAR", "IR_PULANDO", "RASTEJANDO", "GRITAR_ALTO
-            //CORRER, tocar a FLAUTA, usar a FACA ou GRITAR
                 
-            if(comando[0] == "agachar" ||  comando[0] == "ir_pulando" || comando[0] == "gritar_alto" || (comando[0] == "correr" && x == 6) ){
+            if(comando[0] == "agachar" ||  comando[0] == "ir_pulando" || comando[0] == "gritar_alto" || (comando[0] == "correr" && x != 2)){
                 
                 if(x == 6){
                     console.log("Não foi uma boa ideia, elas te picaram até a morte\n")
                 }
-
+                else if(x == 9){
+                    console.log("A pedra esmagou o Indio Ana Jones\n")
+                }
                 gameOver()
             }
 
@@ -198,14 +212,39 @@ while(jogo){
                 turno = false
 
             }
+            else if(comando[0] == "ficar_parado" && x == 7){
+                for(i = 0; i < game.inventario.length; i++){
+                    if("ruby" == game.inventario[i] || "ouro" == game.inventario[i]){
+                    
+                    console.log("A mumia te viu e te matou")
+                    gameOver()
+                    }
+                }
+                console.log("A mumia te viu mas não deu bola e saiu por onde entrou")
+                resolved(true,0)
+            }   
+
+            else if(comandoUsuario == "deitar canto" || comandoUsuario == "deitar no canto"){
+                console.log("Indio Ana Jones escapou por pouco" + "e conseguiu encontrar a saida do tunel")
+                x = game.cenas[x].exit[0]   
+                turno = false 
+            }
+
+
 
             else{
-              comandoErro()
+            comandoErro()
             }
 
             break
 
         }
+
+    
+
+
+
+       
     }
 }
 
@@ -310,7 +349,6 @@ function resolved(bool, posicao){
     game.cenas[x].resolved[posicao] = bool
 }
 
-
 function info(){
     console.log("\n\ncomandos validos:\n\n"+
     "\tuse OBJETO with OBJETO\n" +
@@ -320,7 +358,16 @@ function info(){
     "\tgo in SAIDA\n" +
     "\topen OBJETO\n" +
     "\tdeliver\n\n"
-
-    
 )
+}
+function creditos(){
+    console.log("\n\nAutores e desenvolvedores:")
+    console.log("\tDaniel e Luiz")
+    console.log("\nCodico do jogo:")
+    console.log("\nhttps://github.com/DanielVenturini/TAD-in-TypeScript")
+    
+    console.log("\n\nObrigado por zerar o jogo\n\n")
+
+    console.log("\nFIM\n\n")
+    
 }

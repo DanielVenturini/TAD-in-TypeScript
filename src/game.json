@@ -11,7 +11,7 @@
             "object": ["tocha", "ouro", "mim"],
             "action":[],
             "resolved": [true, true, false],
-            "exit": [1,2,0]
+            "exit": [1,2,9]
         },
     
         {   "id": 1,
@@ -70,7 +70,9 @@
     
         {   "id": 7,
             "title": "cena 7",
+
             "description": "\n\tDepois de tamtas desventuras que encontrou durante o caminho, o aqueologo Indio Ana Jones se depara com a SAIDA, mas antes de dar os primeiro passos para sua liberdade e ouve um ruivo de raiva logo atras dele, uma MUMIA aparece furiosa atras dele e vem em sua direção, ele pensa sen tem alguma coisa no inventario que ele possa utilizar",
+
             "object": ["mumia"],
             "action":[],
             "resolved": [false, false, false],
@@ -83,19 +85,18 @@
             "object": [],
             "action":[],
             "resolved": [false, false, false],
-            "exit": [9]
+            "exit": []
         },
     
         {   "id": 9,
             "title": "cena 9",
-            "description": "",
+            "description": "Após entrar descobrir um novo corredor, Indio Ana Jones ouve um barulho gigantesco e percebe que uma bola de pedra macissa esta vindo em sua direção, sorte que ele lembra que so tem um jeito de escapar deste tipo de armadilha",
             "object": [],
             "action":[],
-            "resolved": true,
-            "exit": []
+            "resolved": false,
+            "exit": [8]
         }
     ],
-
     "objetos" : [
 
         {   "id": 0,
