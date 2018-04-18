@@ -34,7 +34,7 @@
 
         {   "id": 3,
             "title": "cena 3",
-            "description": "\n\tDepois de tanto andar, Indio Ana Jonas chega em mais uma camara. Nesta, ele observa caida no chao uma FLAUTA. Um pouco a frente, em cima de uma coluna de pedra, ele vê um JARRO de barro vazio, um pouco pesado. Logo a frente, ele vê uma saida, o SAIDA1",
+            "description": "\n\tDepois de tanto andar, prof Jones chega em mais uma camara. Nesta, ele observa caida no chao uma FLAUTA. Um pouco a frente, em cima de uma coluna de pedra, ele vê um JARRO de barro vazio, um pouco pesado. Logo a frente, ele vê uma saida, o SAIDA1",
             "object": ["flauta", "jarro"],
             "action":[],
             "resolved": [true, true, false],

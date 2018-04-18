@@ -62,7 +62,7 @@ while(jogo){
             case "use": {
 
                 if(estaNoInventario()){
-
+                    console.log("Estah no inventario")
                     if(comando[1] == "tocha" && x == 4){
                         //game.cenas[x].resolved[0] = true
                         resolved(true,0)
@@ -74,6 +74,7 @@ while(jogo){
                     }
 
                     else if(comando[2] == "with" && estaNaCena(3) != -1){                           
+                        console.log("aqui")
                         comparaFraseUsuario()
                         if( comando[1] == "isqueiro" && comando[3] == "tocha"){
                             game.cenas[x].resolved[2] = true
@@ -144,12 +145,10 @@ while(jogo){
                     addObjetoInventario()
 
                     // se for um objeto que faz algo de especial
-
-                    //if(comando[1] == "pergaminho" && x == 6){ se estah na cena entao nao precisamos verificar se eh a cena 6
-                    if(comando[1] == "pergaminho") {
+                    if(comando[1] == "pergaminho" && x == 6) {
                         pos = achaObjeto(comando[1])
 
-                        if(testaFraseCorreta(pos)){
+                        if(testaFraseCorreta(pos) != -1){
                             //game.cenas[x].resolved[0] = false //nao fugir ação
                             resolved(false,0)
                         }
@@ -190,8 +189,9 @@ while(jogo){
 
             case "open":{
                 pos = achaObjeto(comando[1])
-                if(pos != -1){
+                if(pos != -1 && x == 5){
                     testaFraseCorreta(pos)
+                    resolved(true,0)
                 }
                 else {
                 comandoErro()
@@ -289,17 +289,6 @@ function estaNoInventario(){
     return false
 }
 
-/*
-function estaNaCena(index){
-
-    for(i = 0; i < game.cenas.length; i++){
-        if(comando[index] == game.cenas[x].object[i]){
-            return i
-        }
-    }
-    return -1
-}*/
-
 function estaNaCena(index){
 
     // iterar apenas nos objetos da cena
@@ -322,13 +311,15 @@ function getObjeto(objeto){
 }
 
 function comparaFraseUsuario(){
-    for(i = 0; i < game.objetos.length; i++){
+    for(let i = 0; i < game.objetos.length; i++){
         if(comando[1] == game.objetos[i].name){
-            
+
             if(testaFraseCorreta(i) != -1){
-                return i        
+                console.log("frase da live")
+                return i
             }
             else if(testaFraseMorte(i) != -1){
+                console.log("frase da dead")
                 return i
             }
         }
@@ -349,14 +340,14 @@ function testaFraseCorreta(pos){
     
 }
 
-function testaFraseMorte(posOM){
-    for(i = 0; i < game.objetos[pos].commandDead.length; i++){
-        
+function testaFraseMorte(pos){
+    for(let i = 0; i < game.objetos[pos].commandDead.length; i++){
+        console.log(game.objetos[pos].commandDead[i]+ "->" + comandoUsuario)    
+
         if(comandoUsuario == game.objetos[pos].commandDead[i]){
-            
-            if( (pos == 0 && i == 0) || pos == 1){ //id's morte
+            //if( (pos == 0 && i == 0) || pos == 1 || pos == ){              //id's morte
                 gameOver()
-            }
+            //}
             return i
         }
     }
@@ -458,7 +449,7 @@ function inicializaGame(){
                 try{
                     return load(opc[1])
                 } catch (e) {
-                    console.log("Arquivo /src/save/" + opc[1] + " nao existe")
+                    console.log("Arquivo /src/save/" + opc[1] + ".json nao existe")
                     continue
                 }
             }
@@ -477,10 +468,12 @@ function inicializaGame(){
 }
 
 function save(nameSave){
+    nameSave += '.json'
     fs.writeFileSync('./src/save/' + nameSave, JSON.stringify(game))
     console.log("Jogo salvo com sucesso em ./src/save/" + nameSave)
 }
 
 function load(nameLoad){
+    nameLoad += '.json'
     return JSON.parse(fs.readFileSync('./src/save/' + nameLoad, 'utf8'))
 }
