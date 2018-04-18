@@ -24,7 +24,6 @@ while(jogo){
         break
     }
 
-    // dois while, um para interagir na cena, e outro para carregar a outra cena
     while(turno){
 
         var comandoUsuario = rl.prompt("> ");
@@ -64,7 +63,6 @@ while(jogo){
                 if(estaNoInventario()){
 
                     if(comando[1] == "tocha" && x == 4){
-                        //game.cenas[x].resolved[0] = true
                         resolved(true,0)
                         pos = achaObjeto(comando[1])
                         if(pos != -1){
@@ -143,43 +141,33 @@ while(jogo){
 
             case "get": {
 
-                // se digitar, por exemplo, get flauta peixe
                 if(comando.length > 2){
                     comandoErro()
                 }
 
                 if(estaNoInventario() == true){
-                    //console.log("Item ja esta no Inventario")
                     printMensagem(0)
                     break
                 } else if(estaNaCena(1) != -1){
-                    // objeto nao esta no inventario mas esta na cena. Entao adiciona ao inventario
                     addObjetoInventario()
 
-                    // se for um objeto que faz algo de especial
                     if(comando[1] == "pergaminho" && x == 6) {
                         pos = achaObjeto(comando[1])
-
                         if(testaFraseCorreta(pos) != -1){
-                            //game.cenas[x].resolved[0] = false //nao fugir ação
                             resolved(false,0)
                         }
-                    /*
-                    eram todos if if if if
-                    */
                     } else if(comando[1] == "jarro"){
                         pos = achaObjeto(comando[1])
-                        if(testaFraseCorreta(pos)){
+                        if(testaFraseCorreta(pos) != -1){
                             resolved(true,1)
                         }
                     } else if(comando[1] == "ruby"){
                         pos = achaObjeto(comando[1])
-                        if(testaFraseCorreta(pos)){
+                        if(testaFraseCorreta(pos) != -1){
                             resolved(true,0)
                         }
                     }
                 } else{
-                    // nao esta no inventario nem na cena
                     comandoErro()
                 }
                 
@@ -229,19 +217,14 @@ while(jogo){
 
             else if(comando[0] == "rastejar" || comando[0] == "correr" || comando[0] == "gritar"){
                 if(x == 6){
-                    //console.log("As serpentes ficaram atordoadas com o barulho, fazendo assim que Indio Ana Jones pudesse ir saida")
                     printMensagem(3)
-                    //game.cenas[x].resolved[0] = true
                     resolved(true,0)                    
                 }else{
-                    //console.log("Indio Ana Jones escapou por pouco")
                     printMensagem(4)
                 }
                 
                 resolved(true,0)
-               // x += 1  //carrega proxima cena
-                //turno = false
-
+           
             } else if(comando[0] == "ficar_parado" && x == 7){
                 let i
                 for(i = 0; i < game.inventario.length; i++){
