@@ -237,9 +237,10 @@ while(jogo){
                     //console.log("Indio Ana Jones escapou por pouco")
                     printMensagem(4)
                 }
-
-                x += 1  //carrega proxima cena
-                turno = false
+                
+                resolved(true,0)
+               // x += 1  //carrega proxima cena
+                //turno = false
 
             } else if(comando[0] == "ficar_parado" && x == 7){
                 let i
