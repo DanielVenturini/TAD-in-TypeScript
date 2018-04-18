@@ -4,7 +4,7 @@ var game = JSON.parse(fs.readFileSync('./src/game.json', 'utf8'));
 
 const rl = readline
 
-var x = 0      //cena atual
+var x = 7      //cena atual
 var i = 0
 var pos = 0
 
@@ -50,18 +50,23 @@ while(jogo){
                     if(comando[1] == "tocha" && x == 4){
                         //game.cenas[x].resolved[0] = true
                         resolved(true,0)
-                        console.log(game.cenas[x])
-                        console.log(game.objetos[8].txtPositivo[0])
+                        pos = achaObjeto(comando[1])
+                        if(pos != -1){
+                            console.log(game.objetos[8].txtPositivo[0])
+                        }
                         break
                     }
-
-                    else if(comando[2] == "with" && estaNaCena(3) != -1){                       
-
+                    
+                    else if(comando[2] == "with" && estaNaCena(3) != -1){                           
                         comparaFraseUsuario()
                         if( comando[1] == "isqueiro" && comando[3] == "tocha"){
                             game.cenas[x].resolved[2] = true
                         }
-
+                        
+                        if(comando[3] == "mumia" && x == 7){
+                            //game.objetos[pos].resolved[0] = true
+                            resolved(true, 0)    
+                        }
                         continue
                     }
                 }
@@ -77,7 +82,7 @@ while(jogo){
 
             case "go": {
                 
-                if(comando[2] == "saida1" || comando[2] == "saida"){                    
+                if(comando[2] == "saida1" || comando[2] == "saida"){                                       
                     if(game.cenas[x].resolved[0] == true){
                         x = game.cenas[x].exit[0]
                         turno = false
@@ -159,20 +164,6 @@ while(jogo){
 
             break
             }
-
-            case "deliver": {
-                if(comando[1] == "mumia" && x == 7){
-                    pos = achaObjeto(comando[1])
-
-                    if(pos != -1){
-                        game.objetos[pos].txtPositivo[0]
-                        game.objetos[pos].resolved[0] = true
-                    }
-                }
-
-            break
-            }
-
             case "open":{
                 pos = achaObjeto(comando[1])
                 if(pos != -1){
@@ -189,10 +180,12 @@ while(jogo){
             if(comando[0] == "agachar" ||  comando[0] == "ir_pulando" || comando[0] == "gritar_alto" || (comando[0] == "correr" && x != 2)){
                 
                 if(x == 6){
-                    console.log("Não foi uma boa ideia, elas te picaram até a morte\n")
+                    //console.log("Não foi uma boa ideia, elas te picaram até a morte\n")
+                    printMensagem(1)
                 }
                 else if(x == 9){
-                    console.log("A pedra esmagou o Indio Ana Jones\n")
+                    //console.log("A pedra esmagou o Indio Ana Jones\n")
+                    printMensagem(2)
                 }
                 gameOver()
             }
@@ -200,11 +193,13 @@ while(jogo){
             else if(comando[0] == "rastejar" || comando[0] == "correr" || comando[0] == "gritar"){
 
                 if(x == 6){
-                    console.log("As serpentes ficaram atordoadas com o barulho, fazendo assim que Indio Ana Jones pudesse ir saida")
+                    //console.log("As serpentes ficaram atordoadas com o barulho, fazendo assim que Indio Ana Jones pudesse ir saida")
+                    printMensagem(3)
                     //game.cenas[x].resolved[0] = true
                     resolved(true,0)                    
                 }else{
-                    console.log("Indio Ana Jones escapou por pouco")
+                    //console.log("Indio Ana Jones escapou por pouco")
+                    printMensagem(4)
                 }
 
                 x += 1  //carrega proxima cena
@@ -215,21 +210,24 @@ while(jogo){
                 for(i = 0; i < game.inventario.length; i++){
                     if("ruby" == game.inventario[i] || "ouro" == game.inventario[i]){
                     
-                    console.log("A mumia te viu e te matou")
+                    //console.log("A mumia te viu e te matou")
+                    printMensagem(5)
                     gameOver()
                     }
                 }
-                console.log("A mumia te viu mas não deu bola e saiu por onde entrou")
+                //console.log("A mumia te viu mas não deu bola e saiu por onde entrou")
+                printMensagem(6)
                 resolved(true,0)
             }   
 
             else if(comandoUsuario == "deitar canto" || comandoUsuario == "deitar no canto"){
-                console.log("Indio Ana Jones escapou por pouco" + "e conseguiu encontrar a saida do tunel")
+                //console.log("Indio Ana Jones escapou por pouco" + "e conseguiu encontrar a saida do tunel")
+                printMensagem(7)
                 x = game.cenas[x].exit[0]   
                 turno = false 
             }
             else{
-            comandoErro()
+                comandoErro()
             }
 
             break
@@ -335,8 +333,8 @@ function comandoErro(){
     console.log("Comando Invalido")
 }
 
-function resolved(bool, posicao){
-    game.cenas[x].resolved[posicao] = bool
+function resolved(b, posicao){
+    game.cenas[x].resolved[posicao] = b
 }
 
 function info(){

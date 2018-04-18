@@ -1,7 +1,7 @@
 {
     "cenaAtual" : 0,
 
-    "inventario": ["faca", "dicionario", "isqueiro"],
+    "inventario": ["faca", "dicionario", "isqueiro","ruby"],
 
     "cenas" : [
 
@@ -91,7 +91,7 @@
             "description": "Após entrar descobrir um novo corredor, Indio Ana Jones ouve um barulho gigantesco e percebe que uma bola de pedra macissa esta vindo em sua direção, sorte que ele lembra que so tem um jeito de escapar deste tipo de armadilha",
             "object": [],
             "action":[],
-            "resolved": false,
+            "resolved": [false],
             "exit": [8]
         }
     ],
@@ -148,7 +148,7 @@
         {   "id": 4,
             "name": "jarro",
             "description": "Um JARRO antigo para pegar água",
-            "txtPositivo": ["Voce liberou uma novo caminho, a SAIDA2"],
+            "txtPositivo": ["Ao pegar o JARRO a parede atras do prof Jones mostra um caminho antes escondido a SAIDA2"],
             "txtDead": [],
             "commandCorrect": ["get jarro"],
             "commandDead": [],
@@ -222,11 +222,12 @@
             "description": "Gema de RUBY gigante",
             "txtPositivo": ["A mumia ficou satisfeita, e voltou para tirar mais uma soneca"],
             "txtNegative": "",
-            "commandCorrect": ["deliver ruby"],
+            "commandCorrect": ["use ruby with mumia"],
+            "commandDead": [],
             "targetScene": 0,
             "resorved": 0,
             "got": 0
         }
     ],
-    "cenasJogo" : ["Item ja esta no Inventario"]
+    "cenasJogo" : ["Item ja esta no Inventario","Não foi uma boa ideia, elas te picaram até a morte\n","A pedra esmagou o Indio Ana Jones\n","As serpentes ficaram atordoadas com o barulho, fazendo assim que Indio Ana Jones pudesse ir saida","Indio Ana Jones escapou por pouco","A mumia te viu e te matou","A mumia te viu mas não deu bola e saiu por onde entrou","Indio Ana Jones escapou por pouco","e conseguiu encontrar a saida do tunel"]
 }
