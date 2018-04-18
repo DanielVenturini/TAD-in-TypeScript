@@ -446,9 +446,12 @@ function split(variavel){
 
 
 function inicializaGame(){
-    console.log("OPCOES:")
-    console.log("newgame")
-    console.log("load NOME_LOAD")
+    console.log("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
+    console.log("\n\n\n\n")
+    console.log("\t\t\t\t\t\t\t\t\tOPCOES:")
+    console.log("\t\t\t\t\t\t\t\t\tNEWGAME")
+    console.log("\t\t\t\t\t\t\t\t\tload NOME_LOAD")
+    console.log("\n\n\n\n")
 
     while(true){
 
@@ -477,7 +480,7 @@ function inicializaGame(){
             case "exit": {
                 jogo = false
                 creditos()
-                return
+                return true
             }
 
             default: {
