@@ -1,11 +1,10 @@
 var readline = require('readline-sync');
 var fs = require('fs');
-
 var game = JSON.parse(fs.readFileSync('./src/game.json', 'utf8'));
 
 const rl = readline
 
-var x = 4      //cena atual
+var x = 0      //cena atual
 var i = 0
 var pos = 0
 
@@ -56,7 +55,7 @@ while(jogo){
                         break
                     }
 
-                    else if(comando[3] == "with" && estaNaCena(3) != -1){                       
+                    else if(comando[2] == "with" && estaNaCena(3) != -1){                       
 
                         comparaFraseUsuario()
                         if( comando[1] == "isqueiro" && comando[3] == "tocha"){
@@ -93,7 +92,6 @@ while(jogo){
                 else if(comando[2] == "saida3"){
                     if(game.cenas[x].resolved[2]){
                         x = game.cenas[x].exit[2]
-                        console.log("akii")
                         turno = false
                     }
                 }
@@ -114,7 +112,8 @@ while(jogo){
             case "get": {
                 
                 if(estaNoInventario() == true){
-                    console.log("Item ja esta no Inventario")
+                    //console.log("Item ja esta no Inventario")
+                    printMensagem(0)
                     break
                 } 
                 else if(estaNaCena(1) != -1){
@@ -229,9 +228,6 @@ while(jogo){
                 x = game.cenas[x].exit[0]   
                 turno = false 
             }
-
-
-
             else{
             comandoErro()
             }
@@ -239,12 +235,6 @@ while(jogo){
             break
 
         }
-
-    
-
-
-
-       
     }
 }
 
@@ -352,22 +342,28 @@ function resolved(bool, posicao){
 function info(){
     console.log("\n\ncomandos validos:\n\n"+
     "\tuse OBJETO with OBJETO\n" +
-    "\tget OBJETO\n" +
-    "\tuse OBJETO\n" +
-    "\tAÇÃO ex: PULAR\n" +
-    "\tgo in SAIDA\n" +
-    "\topen OBJETO\n" +
-    "\tdeliver\n\n"
+    "\tget OBJETO\n"    +
+    "\tuse OBJETO\n"    +
+    "\tAÇÃO ex: PULAR\n"+
+    "\tgo in SAIDA\n"   +
+    "\topen OBJETO\n"   +
+    "\tdeliver OBJETO\n"       +
+    "\t\ninfo  OBJETO\n"       +
+    "\t\nsave nomePartida\n"      +
+    "\t\nload nomePartida\n"      +
+    "\t\nEXIT\n"        
 )
 }
 function creditos(){
     console.log("\n\nAutores e desenvolvedores:")
     console.log("\tDaniel e Luiz")
     console.log("\nCodico do jogo:")
-    console.log("\nhttps://github.com/DanielVenturini/TAD-in-TypeScript")
-    
+    console.log("\nhttps://github.com/DanielVenturini/TAD-in-TypeScript") 
     console.log("\n\nObrigado por zerar o jogo\n\n")
-
     console.log("\nFIM\n\n")
     
+}
+
+function printMensagem(pos){
+    console.log(game.cenasJogo[pos])
 }

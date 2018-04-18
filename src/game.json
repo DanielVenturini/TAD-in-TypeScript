@@ -44,7 +44,7 @@
         {   "id": 4,
             "title": "cena 4",
             "description": "\n\tApós entrar na passagem secreta, ele descobre que não consegue enchergar quase nada, apenas uma ALAVANCA que reflete o pouco de luz que esta entrando no ambiente",
-            "object": ["tocha","alavanca"],
+            "object": ["alavanca"],
             "action":[],
             "resolved": [false, false, false],
             "exit": [5]
@@ -70,9 +70,7 @@
     
         {   "id": 7,
             "title": "cena 7",
-
             "description": "\n\tDepois de tamtas desventuras que encontrou durante o caminho, o aqueologo Indio Ana Jones se depara com a SAIDA, mas antes de dar os primeiro passos para sua liberdade e ouve um ruivo de raiva logo atras dele, uma MUMIA aparece furiosa atras dele e vem em sua direção, ele pensa sen tem alguma coisa no inventario que ele possa utilizar",
-
             "object": ["mumia"],
             "action":[],
             "resolved": [false, false, false],
@@ -229,5 +227,6 @@
             "resorved": 0,
             "got": 0
         }
-    ]
+    ],
+    "cenasJogo" : ["Item ja esta no Inventario"]
 }
