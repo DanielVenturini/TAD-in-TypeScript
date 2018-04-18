@@ -43,10 +43,26 @@ while(jogo){
                 break
             }
 
-            case "use": {
-                
+            case "check": {
                 if(estaNoInventario()){
-                    
+                    console.log(game.objetos[achaObjeto(comando[1])].description)
+                    break
+                }
+
+                pos = estaNaCena(1)
+                if(estaNaCena(1) != -1){
+                    console.log(getObjeto(comando[1]).description)
+                    break
+                }
+
+                console.log("Objeto nao esta no inventario nem na cena ou nao existe.")
+                break
+            }
+
+            case "use": {
+
+                if(estaNoInventario()){
+
                     if(comando[1] == "tocha" && x == 4){
                         //game.cenas[x].resolved[0] = true
                         resolved(true,0)
@@ -56,7 +72,7 @@ while(jogo){
                         }
                         break
                     }
-                    
+
                     else if(comando[2] == "with" && estaNaCena(3) != -1){                           
                         comparaFraseUsuario()
                         if( comando[1] == "isqueiro" && comando[3] == "tocha"){
@@ -77,7 +93,7 @@ while(jogo){
                 }
                 
                 comandoErro()
-            break
+                break
             }
 
             case "go": {
@@ -109,42 +125,50 @@ while(jogo){
 
             case "info": {
                 info()
-            break
+                break
             }
 
             case "get": {
-                
+
+                // se digitar, por exemplo, get flauta peixe
+                if(comando.length > 2){
+                    comandoErro()
+                }
+
                 if(estaNoInventario() == true){
                     //console.log("Item ja esta no Inventario")
                     printMensagem(0)
                     break
-                } 
-                else if(estaNaCena(1) != -1){
-                    getObjetoInventario()
-                    
-                    if(comando[1] == "pergaminho" && x == 6){
+                } else if(estaNaCena(1) != -1){
+                    // objeto nao esta no inventario mas esta na cena. Entao adiciona ao inventario
+                    addObjetoInventario()
+
+                    // se for um objeto que faz algo de especial
+
+                    //if(comando[1] == "pergaminho" && x == 6){ se estah na cena entao nao precisamos verificar se eh a cena 6
+                    if(comando[1] == "pergaminho") {
                         pos = achaObjeto(comando[1])
-                        
+
                         if(testaFraseCorreta(pos)){
                             //game.cenas[x].resolved[0] = false //nao fugir ação
                             resolved(false,0)
-
                         }
-                    }
-                    if(comando[1] == "jarro" && x == 3){
+                    /*
+                    eram todos if if if if
+                    */
+                    } else if(comando[1] == "jarro"){
                         pos = achaObjeto(comando[1])
                         if(testaFraseCorreta(pos)){
                             resolved(true,1)
                         }
-                    }
-                    if(comando[1] == "ruby" && x == 5){
+                    } else if(comando[1] == "ruby"){
                         pos = achaObjeto(comando[1])
                         if(testaFraseCorreta(pos)){
                             resolved(true,0)
                         }
                     }
-                }
-                else{
+                } else{
+                    // nao esta no inventario nem na cena
                     comandoErro()
                 }
                 
@@ -157,12 +181,13 @@ while(jogo){
                 break
             }
 
-            case "Load Game":{
-                load(comando[1])
+            case "load":{
+                game = load(comando[1])
                 x = game.cenaAtual
                 console.log(game.cenas[x].description)
                 break
             }
+
             case "open":{
                 pos = achaObjeto(comando[1])
                 if(pos != -1){
@@ -175,17 +200,17 @@ while(jogo){
             }
 
             default:
-                
+
             if(comando[0] == "agachar" ||  comando[0] == "ir_pulando" || comando[0] == "gritar_alto" || (comando[0] == "correr" && x != 2)){
-                
+
                 if(x == 6){
                     //console.log("Não foi uma boa ideia, elas te picaram até a morte\n")
                     printMensagem(1)
-                }
-                else if(x == 9){
+                } else if(x == 9){
                     //console.log("A pedra esmagou o Indio Ana Jones\n")
                     printMensagem(2)
                 }
+
                 gameOver()
             }
 
@@ -204,8 +229,7 @@ while(jogo){
                 x += 1  //carrega proxima cena
                 turno = false
 
-            }
-            else if(comando[0] == "ficar_parado" && x == 7){
+            } else if(comando[0] == "ficar_parado" && x == 7){
                 for(i = 0; i < game.inventario.length; i++){
                     if("ruby" == game.inventario[i] || "ouro" == game.inventario[i]){
                     
@@ -217,9 +241,7 @@ while(jogo){
                 //console.log("A mumia te viu mas não deu bola e saiu por onde entrou")
                 printMensagem(6)
                 resolved(true,0)
-            }   
-
-            else if(comandoUsuario == "deitar canto" || comandoUsuario == "deitar no canto"){
+            } else if(comandoUsuario == "deitar_canto"){
                 //console.log("Indio Ana Jones escapou por pouco" + "e conseguiu encontrar a saida do tunel")
                 printMensagem(7)
                 x = game.cenas[x].exit[0]   
@@ -236,7 +258,7 @@ while(jogo){
 }
 
 function achaObjeto(obj){
-    for(i=0; i<game.objetos.length; i++){
+    for(i = 0; i < game.objetos.length; i ++){
         if(obj == game.objetos[i].name){
             return i
         }
@@ -244,16 +266,17 @@ function achaObjeto(obj){
     return -1
 }
 
-
-function getObjetoInventario(){
-    for(i=0; i< game.objetos.length; i++){
+function addObjetoInventario(){
+    for(i = 0; i < game.objetos.length; i++){
         if(comando[1] == game.objetos[i].name && game.objetos[i].got == 0){
             game.inventario[game.inventario.length] = game.objetos[i].name
             game.objetos[i].got = 1
-            console.log(comando[1] + " esta no seu inventario")
-        return i
+            console.log(comando[1] + " foi adicionado ao seu inventario")
+            return i
         }
     }
+
+    console.log("Por incrivel que parece, o objeto estah na cena mas nao existe na lista de objetos")
     return -1
 }
 
@@ -266,14 +289,36 @@ function estaNoInventario(){
     return false
 }
 
+/*
 function estaNaCena(index){
-    
+
     for(i = 0; i < game.cenas.length; i++){
         if(comando[index] == game.cenas[x].object[i]){
             return i
         }
-    }    
+    }
     return -1
+}*/
+
+function estaNaCena(index){
+
+    // iterar apenas nos objetos da cena
+    for(i = 0; i < game.cenas[x].object.length; i++){
+        if(comando[index] == game.cenas[x].object[i]){
+            return i
+        }
+    }
+    return -1
+}
+
+function getObjeto(objeto){
+    for(i = 0; i < game.objetos.length; i ++){
+        if(objeto == game.objetos[i].name){
+            return game.objetos[i]
+        }
+    }
+
+    return null
 }
 
 function comparaFraseUsuario(){
@@ -421,7 +466,7 @@ function inicializaGame(){
             case "exit": {
                 jogo = false
                 creditos()
-                break
+                return
             }
 
             default: {
