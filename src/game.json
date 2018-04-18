@@ -7,7 +7,7 @@
 
         {   "id": 0,
             "title": "cena inicial",
-            "description": "\n\tEm sua expedição pelo Egito, o arqueólogo prof Jones, sem querer, caiu dentro de uma antiga tumba do faraó. Por ser arqueólogo, ele sabe que a única saída desta tumba é por cima. Então prof Jones terá que descobrir, dentre as várias caminhos da pirâmide, qual deles o levarão a saída. Por esquecer sua mochila no acampamento, prof Jones tem apenas em seus bolsos um ISQUEIRO, uma FACA, e um DICIONÁRIO de Egipcio/Portugues.\n\tO clima está frio e prof Jones está assustado, pois sabe que nesta pirâmide se encontra uma múmia real enterrada em alguma tumba. Observando ao redor, prof Jones consegue enxergar uma TOCHA, porém ela está apagada. Com muita sorte, apesar de estar trancado na pirâmide, prof Jones caiu em cima de uma barra de OURO. Na sala da pirâmide onde prof Jones está caído está muito Escuro, porém prof Jones consegue enxergar 2 saidas: a SAIDA1 ou SAIDA2",
+            "description": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\tEm sua expedição pelo Egito, o arqueólogo prof Jones, sem querer, caiu dentro de uma antiga tumba do faraó. Por ser arqueólogo, ele sabe que a única saída desta tumba é por cima. Então prof Jones terá que descobrir, dentre as várias caminhos da pirâmide, qual deles o levarão a saída. Por esquecer sua mochila no acampamento, prof Jones tem apenas em seus bolsos um ISQUEIRO, uma FACA, e um DICIONÁRIO de Egipcio/Portugues.\n\tO clima está frio e prof Jones está assustado, pois sabe que nesta pirâmide se encontra uma múmia real enterrada em alguma tumba. Observando ao redor, prof Jones consegue enxergar uma TOCHA, porém ela está apagada. Com muita sorte, apesar de estar trancado na pirâmide, prof Jones caiu em cima de uma barra de OURO. Na sala da pirâmide onde prof Jones está caído está muito Escuro, porém prof Jones consegue enxergar 2 saidas: a SAIDA1 ou SAIDA2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
             "object": ["tocha", "ouro", "mim"],
             "action":[],
             "resolved": [true, true, false],
@@ -16,7 +16,7 @@
 
         {   "id": 1,
             "title": "cena 1",
-            "description": "\n\tAo chegar nesta sala, prof Jones se deparou duas portas com duas placas com grafias em Egipcio. Em cima da SAIDA1 esta escrito na PLACA1 MIUR UED, e em cima da SAIDA2 na PLACA2 esta escrito SAOB ED.",
+            "description": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\tAo chegar nesta sala, prof Jones se deparou duas portas com duas placas com grafias em Egipcio. Em cima da SAIDA1 esta escrito na PLACA1 MIUR UED, e em cima da SAIDA2 na PLACA2 esta escrito SAOB ED.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
             "object": ["placa1", "placa2"],
             "action": [],
             "resolved": [true, true, false],
@@ -25,7 +25,7 @@
     
         {   "id": 2,
             "title": "cena 2",
-            "description": "\n\tAo entrar nesta sala, prof Jones percebe uma descida no piso. Pouco após, ele ouve um leve barulho. Então um barulho maior. Prof Jones olha para baixo e percebe que ele pisou em um bloco que provavelmente é uma armadilha. Ao tirar o pé do bloco, o corredor a sua frente é inundado por uma chuva de flechas de parede a parede. Prof Jones sabe que tem que prosseguir, então ele lembra que há apenas um jeito de passar pelo corredor e conseguir sobrevive: RASTEJAR, CORRER, IR_PULANDO, ou GRITAR_ALTO.",
+            "description": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\tAo entrar nesta sala, prof Jones percebe uma descida no piso. Pouco após, ele ouve um leve barulho. Então um barulho maior. Prof Jones olha para baixo e percebe que ele pisou em um bloco que provavelmente é uma armadilha. Ao tirar o pé do bloco, o corredor a sua frente é inundado por uma chuva de flechas de parede a parede. Prof Jones sabe que tem que prosseguir, então ele lembra que há apenas um jeito de passar pelo corredor e conseguir sobrevive: RASTEJAR, CORRER, IR_PULANDO, ou GRITAR_ALTO.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
             "object": [],
             "resolved": [false, false, false],
             "exit": [3]
@@ -33,7 +33,7 @@
 
         {   "id": 3,
             "title": "cena 3",
-            "description": "\n\tDepois de tanto andar, prof Jones chega em mais uma camara. Nesta, ele observa caida no chao uma FLAUTA. Um pouco a frente, em cima de uma coluna de pedra, ele vê um JARRO de barro vazio, um pouco pesado. Logo a frente, ele vê uma saida, o SAIDA1",
+            "description": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\tDepois de tanto andar, prof Jones chega em mais uma camara. Nesta, ele observa caida no chao uma FLAUTA. Um pouco a frente, em cima de uma coluna de pedra, ele vê um JARRO de barro vazio, um pouco pesado. Logo a frente, ele vê uma saida, o SAIDA1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
             "object": ["flauta", "jarro"],
             "action":[],
             "resolved": [true, false, false],
@@ -42,7 +42,7 @@
     
         {   "id": 4,
             "title": "cena 4",
-            "description": "\n\tApós entrar na passagem secreta, ele descobre que não consegue enchergar quase nada, apenas uma ALAVANCA que reflete o pouco de luz que esta entrando no ambiente",
+            "description": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\tApós entrar na passagem secreta, ele descobre que não consegue enchergar quase nada, apenas uma ALAVANCA que reflete o pouco de luz que esta entrando no ambiente\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
             "object": ["alavanca"],
             "action":[],
             "resolved": [false, false, false],
@@ -51,7 +51,7 @@
     
         {   "id": 5,
             "title": "cena 5",
-            "description": "\n\tAo entrar na camera ele se depara com o SARCOFAGO do faraó Anubiks. Na lateral do Sarcófago, há uma RUBRICA grafada em Egípcio. A tampa do SARCOFAGO parece esta entre aberta com uma luz violeta que esta saindo de dentro. Provavelmente da para abrir.",
+            "description": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\tAo entrar na camera ele se depara com o SARCOFAGO do faraó Anubiks. Na lateral do Sarcófago, há uma RUBRICA grafada em Egípcio. A tampa do SARCOFAGO parece esta entre aberta com uma luz violeta que esta saindo de dentro. Provavelmente da para abrir.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
             "object": ["sarcofago", "ruby", "rubrica"],
             "action":[],
             "resolved": [false, false, false],
@@ -60,7 +60,7 @@
 
         {   "id": 6,
             "title": "cena 6",
-            "description": "\n\tAo entrar nesta nova camera ele percebe logo de cara, que no centro do ambiente se encontra um PERGAMINHO dourado relusente em cima de um pedestal e logo atraz uma SAIDA para aquela sala",
+            "description": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\tAo entrar nesta nova camera ele percebe logo de cara, que no centro do ambiente se encontra um PERGAMINHO dourado relusente em cima de um pedestal e logo atraz uma SAIDA para aquela sala\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
             "object": ["pergaminho","cobra"],
             "action":[],
             "resolved": [true, false, false],
@@ -69,7 +69,7 @@
     
         {   "id": 7,
             "title": "cena 7",
-            "description": "\n\tDepois de tamtas desventuras que encontrou durante o caminho, o aqueologo prof Jones se depara com a SAIDA da piramide, mas antes de dar os primeiro passos para sua liberdade e ouve um ruivo de raiva logo atras dele, uma MUMIA aparece furiosa atras dele e vem em sua direção, ele pensa sen tem alguma Coisa no inventario que ele possa utilizar, ou ele apenas deve CORRER ou FICAR_PARADO",
+            "description": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\tDepois de tamtas desventuras que encontrou durante o caminho, o aqueologo prof Jones se depara com a SAIDA da piramide, mas antes de dar os primeiro passos para sua liberdade e ouve um ruivo de raiva logo atras dele, uma MUMIA aparece furiosa atras dele e vem em sua direção, ele pensa sen tem alguma Coisa no inventario que ele possa utilizar, ou ele apenas deve CORRER ou FICAR_PARADO\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
             "object": ["mumia"],
             "action":[],
             "resolved": [false, false, false],
@@ -78,7 +78,7 @@
     
         {   "id": 8,
             "title": "cena 8",
-            "description": "\n\tApos finalmente sair da tumba, ele se depara com ladroes de tumbas nazistas, onde o arqueologo é capturado e amarrado em cima do prota-mala, sera que nosso Heroi vai escapar de mais uma enrascada",
+            "description": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\tApos finalmente sair da tumba, ele se depara com ladroes de tumbas nazistas, onde o arqueologo é capturado e amarrado em cima do prota-mala, sera que nosso Heroi vai escapar de mais uma enrascada\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
             "object": [],
             "action":[],
             "resolved": [false, false, false],
@@ -87,7 +87,7 @@
 
         {   "id": 9,
             "title": "cena 9",
-            "description": "Após descobrir um novo corredor, prof Jones ouve um barulho gigantesco e percebe que uma bola de pedra maciça esta vindo em sua direção, sorte que ele lembra que so tem um jeito de escapar deste tipo de armadilha",
+            "description": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nApós descobrir um novo corredor, prof Jones ouve um barulho gigantesco e percebe que uma bola de pedra maciça esta vindo em sua direção, sorte que ele lembra que so tem um jeito de escapar deste tipo de armadilha\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
             "object": [],
             "action":[],
             "resolved": [false],
@@ -99,9 +99,9 @@
 
         {   "id": 0,
             "name": "isqueiro",
-            "description": "ISQUEIRO de prata, serve para acender as coisas.",
-            "txtPositivo": ["A tocha acendeu o ambiente revelando a SAIDA3. Porém este caminho parece uma armadilha."],
-            "txtDead": ["Voçe, desesperadamente, foi muito burro e colocou fogo em voce mesmo."],
+            "description": "\n\nISQUEIRO de prata, serve para acender as coisas.\n\n",
+            "txtPositivo": ["\n\n\tA tocha acendeu o ambiente revelando a SAIDA3. Porém este caminho parece uma armadilha.\n\n"],
+            "txtDead": ["\n\n\tVoçe, desesperadamente, foi muito burro e colocou fogo em voce mesmo.\n\n"],
             "commandCorrect": ["use isqueiro with tocha"],
             "commandDead": ["use isqueiro with mim"],
             "targetScene": 0,
@@ -111,9 +111,9 @@
 
         {   "id": 1,
             "name": "faca",
-            "description": "FACA de ossos em forma de caveira muito afiada",
+            "description": "\n\nFACA de ossos em forma de caveira muito afiada\n\n",
             "txtPositivo": [],
-            "txtDead": ["Voce matou uma cobra, mas foi picado por outras 100 cobras", "Nao se pode matar algo que ja esta morto. Ela apenas quebrou seu pescoço"],
+            "txtDead": ["\n\n\tVoce matou uma cobra, mas foi picado por outras 100 cobras\n\n", "\n\n\tNao se pode matar algo que ja esta morto. Ela apenas quebrou seu pescoço\n\n"],
             "commandCorrect": [],
             "commandDead": ["use faca with cobra", "use faca with mumia"],
             "targetScene": 0,
@@ -123,8 +123,8 @@
 
         {   "id": 2,
             "name": "dicionario",
-            "description": "Serve para traduzir do Egipcio para o Portugues",
-            "txtPositivo": ["tradução = Perigo","tradução = Sem Perigo ", "RUBRICA: aquele da qual me acordar, minha furia sofrerá"],
+            "description": "\n\n\tServe para traduzir do Egipcio para o Portugues\n\n",
+            "txtPositivo": ["\n\n\ttradução = Perigo","\n\n\ttradução = Sem Perigo\n\n ", "\n\n\tRUBRICA: aquele da qual me acordar, minha furia sofrerá\n\n"],
             "txtDead": [],
             "commandCorrect": ["use dicionario with placa1", "use dicionario with placa2", "use dicionario with rubrica"],
             "commandDead": [],
@@ -135,8 +135,8 @@
     
         {   "id": 3,
             "name": "ouro",
-            "description": "Serve como oferenda ou como um objeto de valor",
-            "txtPositivo": ["A mumia ficou satisfeita, e voltou para tirar mais uma soneca de dois mil anos"],
+            "description": "\n\n\tServe como oferenda ou como um objeto de valor\n\n",
+            "txtPositivo": ["\n\n\tA mumia ficou satisfeita, e voltou para tirar mais uma soneca de dois mil anos\n\n"],
             "txtNegative": "",
             "commandCorrect": ["use ouro with mumia"],
             "commandDead": [],
@@ -147,8 +147,8 @@
     
         {   "id": 4,
             "name": "jarro",
-            "description": "Um JARRO antigo para pegar água",
-            "txtPositivo": ["Ao pegar o JARRO a parede atras do prof Jones mostra um caminho antes escondido a SAIDA2"],
+            "description": "\n\n\tUm JARRO antigo para pegar água\n\n",
+            "txtPositivo": ["\n\n\tAo pegar o JARRO a parede atras do prof Jones mostra um caminho antes escondido a SAIDA2\n\n"],
             "txtDead": [],
             "commandCorrect": ["get jarro"],
             "commandDead": [],
@@ -159,8 +159,8 @@
     
         {   "id": 5,
             "name": "flauta",
-            "description": "FLAUTA de osso entalhada para se parecer com uma SERPENTE",
-            "txtPositivo": ["as COBRAS ficaram ipnotizadas pelo som. Entao prof Jones pode ir para a SAIDA"],
+            "description": "\n\n\tFLAUTA de osso entalhada para se parecer com uma SERPENTE\n\n",
+            "txtPositivo": ["\n\n\tas COBRAS ficaram ipnotizadas pelo som. Entao prof Jones pode ir para a SAIDA\n\n"],
             "txtDead": [],
             "commandCorrect": ["use flauta with cobra"],
             "commandDead": [],
@@ -171,9 +171,9 @@
     
         {   "id": 6,
             "name": "alavanca",
-            "description": "Nem tudo o que reluz eh ouro",
+            "description": "\t\t\tNem tudo o que reluz eh ouro",
             "txtPositivo": [],
-            "textDead": ["Um alçapão se abriu, fazendo voce cair num monte de espinhos. VOCE MORREU."],
+            "textDead": ["\n\n\tUm alçapão se abriu, fazendo voce cair num monte de espinhos. VOCE MORREU.\n\n"],
             "commandCorrect": [],
             "commandDead": ["use alavanca"],
             "targetScene": 0,
@@ -183,8 +183,8 @@
 
         {   "id": 8,
             "name": "sarcofago",
-            "description": "Sarcofago de ouro de um grande Faraó. Parace estar meio ABERTO",
-            "txtPositivo": ["Voce encontrou um enorme RUBY dentro do sarcofago. Também, a SAIDA."],
+            "description": "\n\n\tSarcofago de ouro de um grande Faraó. Parace estar meio ABERTO\n\n",
+            "txtPositivo": ["\n\n\tVoce encontrou um enorme RUBY dentro do sarcofago. Também, a SAIDA.\n\n"],
             "txtDead": [],
             "commandCorrect": ["open sarcofago"],
             "commandDead": [],
@@ -195,8 +195,8 @@
 
         {   "id": 9,
             "name": "tocha",
-            "description": "Tocha serve para onde esta escuro",
-            "txtPositivo": ["Voce descobriu uma nova SAIDA"],
+            "description": "\n\n\tTocha serve para onde esta escuro\n\n",
+            "txtPositivo": ["\n\n\tVoce descobriu uma nova SAIDA\n\n"],
             "txtDead": [],
             "commandCorrect": ["use tocha"],
             "commandDead": [],
@@ -207,8 +207,8 @@
 
         {   "id": 10,
             "name": "pergaminho",
-            "description": "PERGAMINHO dourado, muito bonito para estar desprotegido",
-            "txtPositivo": ["O pergaminho era uma armadilha. Entao muitas cobras cairam sobre voce. Entao voce lembra que pode fazer algumas coisas: CORRER, tocar a FLAUTA, usar a FACA ou GRITAR"],
+            "description": "\n\n\tPERGAMINHO dourado, muito bonito para estar desprotegido\n\n",
+            "txtPositivo": ["\n\n\tO pergaminho era uma armadilha. Entao muitas cobras cairam sobre voce. Entao voce lembra que pode fazer algumas coisas: CORRER, tocar a FLAUTA, usar a FACA ou GRITAR\n\n"],
             "txtDead": [],
             "commandCorrect": ["get pergaminho"],
             "commandDead": [],
@@ -219,8 +219,8 @@
 
         {   "id": 11,
             "name": "ruby",
-            "description": "Gema de RUBY gigante",
-            "txtPositivo": ["A mumia ficou satisfeita, e voltou para tirar mais uma soneca de dois mil anos"],
+            "description": "\n\n\tGema de RUBY gigante",
+            "txtPositivo": ["\n\n\tA mumia ficou satisfeita, e voltou para tirar mais uma soneca de dois mil anos\n\n"],
             "txtNegative": "",
             "commandCorrect": ["use ruby with mumia"],
             "commandDead": [],
@@ -230,5 +230,5 @@
         }
     ],
 
-    "cenasJogo" : ["Item ja esta no Inventario","Não foi uma boa ideia, elas te picaram até a morte\n","A pedra esmagou o prof Jones\n","As serpentes ficaram atordoadas com o barulho, fazendo assim que prof Jones pudesse ir saida","prof Jones escapou por pouco","A mumia te viu e te matou, pois voce estava com alguma coisa dela","A mumia te viu mas não deu bola e saiu por onde entrou","prof Jones escapou por pouco","e conseguiu encontrar a saida do tunel", "Nunca que isso ia funcionar."]
+    "cenasJogo" : ["\n\nItem ja esta no Inventario\n\n","\n\nNão foi uma boa ideia, elas te picaram até a morte\n\n\n","\n\nA pedra esmagou o prof Jones\n\n\n","\n\nAs serpentes ficaram atordoadas com o barulho, fazendo assim que prof Jones pudesse ir saida\n\n","\n\nprof Jones escapou por pouco\n\n","\n\nA mumia te viu e te matou, pois voce estava com alguma coisa dela\n\n","\n\nA mumia te viu mas não deu bola e saiu por onde entrou\n\n","\n\nprof Jones escapou por pouco\n\n","\n\ne conseguiu encontrar a saida do tunel\n\n", "\n\nNunca que isso ia funcionar.\n\n"]
 }
