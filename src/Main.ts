@@ -14,7 +14,8 @@ var pos = 0
 
 while(jogo){
 
-    console.log(game.cenas[x].description)
+    console.log("Cena atual: " + x + "\n\n")
+    console.log(game.cenas[x].description + "\n")
     turno = true
     
     if( x == 8 ){
@@ -62,7 +63,7 @@ while(jogo){
             case "use": {
 
                 if(estaNoInventario()){
-                    console.log("Estah no inventario")
+
                     if(comando[1] == "tocha" && x == 4){
                         //game.cenas[x].resolved[0] = true
                         resolved(true,0)
@@ -73,13 +74,16 @@ while(jogo){
                         break
                     }
 
-                    else if(comando[2] == "with" && estaNaCena(3) != -1){                           
-                        console.log("aqui")
+                    else if(comando[2] == "with" && estaNaCena(3) != -1){
                         comparaFraseUsuario()
                         if( comando[1] == "isqueiro" && comando[3] == "tocha"){
                             game.cenas[x].resolved[2] = true
                         }
-                        
+
+                        if(comando[1] == "flauta"){
+                            resolved(true, 0)
+                        }
+
                         if(comando[3] == "mumia" && x == 7){
                             //game.objetos[pos].resolved[0] = true
                             resolved(true, 0)    
@@ -104,17 +108,26 @@ while(jogo){
                         x = game.cenas[x].exit[0]
                         turno = false
                     }
+                    else {
+                        comandoErro()                        
+                    }
                 }
                 else if(comando[2] == "saida2"){
                     if(game.cenas[x].resolved[1]){
                         x = game.cenas[x].exit[1]
                         turno = false
                     }
+                    else {
+                        comandoErro()                        
+                    }
                 }
                 else if(comando[2] == "saida3"){
                     if(game.cenas[x].resolved[2]){
                         x = game.cenas[x].exit[2]
                         turno = false
+                    }
+                    else{
+                        comandoErro()
                     }
                 }
                 else{
@@ -192,6 +205,7 @@ while(jogo){
                 if(pos != -1 && x == 5){
                     testaFraseCorreta(pos)
                     resolved(true,0)
+                    game.objetos[10].got = 0
                 }
                 else {
                 comandoErro()
@@ -204,18 +218,17 @@ while(jogo){
             if(comando[0] == "agachar" ||  comando[0] == "ir_pulando" || comando[0] == "gritar_alto" || (comando[0] == "correr" && x != 2)){
 
                 if(x == 6){
-                    //console.log("Não foi uma boa ideia, elas te picaram até a morte\n")
                     printMensagem(1)
                 } else if(x == 9){
-                    //console.log("A pedra esmagou o Indio Ana Jones\n")
                     printMensagem(2)
+                } else if(x ==2){
+                    printMensagem(9)
                 }
 
                 gameOver()
             }
 
             else if(comando[0] == "rastejar" || comando[0] == "correr" || comando[0] == "gritar"){
-
                 if(x == 6){
                     //console.log("As serpentes ficaram atordoadas com o barulho, fazendo assim que Indio Ana Jones pudesse ir saida")
                     printMensagem(3)
@@ -230,17 +243,23 @@ while(jogo){
                 turno = false
 
             } else if(comando[0] == "ficar_parado" && x == 7){
+                let i
                 for(i = 0; i < game.inventario.length; i++){
-                    if("ruby" == game.inventario[i] || "ouro" == game.inventario[i]){
-                    
-                    //console.log("A mumia te viu e te matou")
-                    printMensagem(5)
-                    gameOver()
+                    if("ruby" == game.inventario[i]){
+                        printMensagem(5)
+                        gameOver()
+                        break
+                    }
+                    else if("ouro" == game.inventario[i]){
+                        printMensagem(5)
+                        gameOver()
+                        break
                     }
                 }
-                //console.log("A mumia te viu mas não deu bola e saiu por onde entrou")
-                printMensagem(6)
-                resolved(true,0)
+                if(i == game.inventario.length){
+                    printMensagem(6)
+                    resolved(true,0)
+                }
             } else if(comandoUsuario == "deitar_canto"){
                 //console.log("Indio Ana Jones escapou por pouco" + "e conseguiu encontrar a saida do tunel")
                 printMensagem(7)
@@ -258,7 +277,7 @@ while(jogo){
 }
 
 function achaObjeto(obj){
-    for(i = 0; i < game.objetos.length; i ++){
+    for(let i = 0; i < game.objetos.length; i ++){
         if(obj == game.objetos[i].name){
             return i
         }
@@ -267,8 +286,13 @@ function achaObjeto(obj){
 }
 
 function addObjetoInventario(){
-    for(i = 0; i < game.objetos.length; i++){
-        if(comando[1] == game.objetos[i].name && game.objetos[i].got == 0){
+    for(let i = 0; i < game.objetos.length; i++){
+        if(comando[1] == game.objetos[i].name){
+            if(game.objetos[i].got == -1){
+                comandoErro()
+                return -1
+            }
+
             game.inventario[game.inventario.length] = game.objetos[i].name
             game.objetos[i].got = 1
             console.log(comando[1] + " foi adicionado ao seu inventario")
@@ -276,12 +300,11 @@ function addObjetoInventario(){
         }
     }
 
-    console.log("Por incrivel que parece, o objeto estah na cena mas nao existe na lista de objetos")
     return -1
 }
 
 function estaNoInventario(){
-    for(i = 0; i < game.inventario.length; i++){
+    for(let i = 0; i < game.inventario.length; i++){
         if(comando[1] == game.inventario[i]){
             return true
         }
@@ -292,7 +315,7 @@ function estaNoInventario(){
 function estaNaCena(index){
 
     // iterar apenas nos objetos da cena
-    for(i = 0; i < game.cenas[x].object.length; i++){
+    for(let i = 0; i < game.cenas[x].object.length; i++){
         if(comando[index] == game.cenas[x].object[i]){
             return i
         }
@@ -301,7 +324,7 @@ function estaNaCena(index){
 }
 
 function getObjeto(objeto){
-    for(i = 0; i < game.objetos.length; i ++){
+    for(let i = 0; i < game.objetos.length; i ++){
         if(objeto == game.objetos[i].name){
             return game.objetos[i]
         }
@@ -313,13 +336,11 @@ function getObjeto(objeto){
 function comparaFraseUsuario(){
     for(let i = 0; i < game.objetos.length; i++){
         if(comando[1] == game.objetos[i].name){
-
+            let a = i
             if(testaFraseCorreta(i) != -1){
-                console.log("frase da live")
                 return i
             }
-            else if(testaFraseMorte(i) != -1){
-                console.log("frase da dead")
+            else if(testaFraseMorte(a) != -1){
                 return i
             }
         }
@@ -330,7 +351,7 @@ function comparaFraseUsuario(){
 
 function testaFraseCorreta(pos){
 
-    for(i = 0; i < game.objetos[pos].commandCorrect.length; i++){
+    for(let i = 0; i < game.objetos[pos].commandCorrect.length; i++){
         if(comandoUsuario == game.objetos[pos].commandCorrect[i]){
             console.log(game.objetos[pos].txtPositivo[i])
             return i
@@ -341,13 +362,12 @@ function testaFraseCorreta(pos){
 }
 
 function testaFraseMorte(pos){
-    for(let i = 0; i < game.objetos[pos].commandDead.length; i++){
-        console.log(game.objetos[pos].commandDead[i]+ "->" + comandoUsuario)    
 
+    for(let i = 0; i < game.objetos[pos].commandDead.length; i++){
+        
         if(comandoUsuario == game.objetos[pos].commandDead[i]){
-            //if( (pos == 0 && i == 0) || pos == 1 || pos == ){              //id's morte
-                gameOver()
-            //}
+            console.log(game.objetos[pos].txtDead[i])
+            gameOver()
             return i
         }
     }
@@ -408,7 +428,7 @@ function split(variavel){
 
     let pos = 0
     let string = ""
-    for(i = 0; i < variavel.length; i ++){
+    for(let i = 0; i < variavel.length; i ++){
 
         if(variavel[i] == " " && i > 0){
             array[pos] = string
