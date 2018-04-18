@@ -14,7 +14,6 @@ var pos = 0
 
 while(jogo){
 
-    console.log("Cena atual: " + x + "\n\n")
     console.log(game.cenas[x].description + "\n")
     turno = true
     
