@@ -1,15 +1,16 @@
 var readline = require('readline-sync');
 var fs = require('fs');
-var game = JSON.parse(fs.readFileSync('./src/game.json', 'utf8'));
 
 const rl = readline
 
-var x = 7      //cena atual
-var i = 0
-var pos = 0
-
 var jogo = true
 var turno
+
+var game = inicializaGame()
+
+var x = game.cenaAtual      //cena atual
+var i = 0
+var pos = 0
 
 while(jogo){
 
@@ -26,10 +27,9 @@ while(jogo){
     // dois while, um para interagir na cena, e outro para carregar a outra cena
     while(turno){
 
-
         var comandoUsuario = rl.prompt("> ");
-        var comando = comandoUsuario.toLowerCase().split(" ")
-        
+        var comando = comandoUsuario.toLowerCase()
+        comando = split(comando)
 
        switch(comando[0]){
            case "inventario": {
@@ -108,9 +108,7 @@ while(jogo){
             }
 
             case "info": {
-
                 info()
-                
             break
             }
 
@@ -153,16 +151,17 @@ while(jogo){
             break
             }
 
-            case "Save Game":{
-
-
-            break
+            case "save":{
+                game.cenaAtual = x
+                save(comando[1])
+                break
             }
 
             case "Load Game":{
-
-
-            break
+                load(comando[1])
+                x = game.cenaAtual
+                console.log(game.cenas[x].description)
+                break
             }
             case "open":{
                 pos = achaObjeto(comando[1])
@@ -346,22 +345,97 @@ function info(){
     "\tgo in SAIDA\n"   +
     "\topen OBJETO\n"   +
     "\tdeliver OBJETO\n"       +
-    "\t\ninfo  OBJETO\n"       +
+    "\t\ncheck  OBJETO\n"       +
     "\t\nsave nomePartida\n"      +
     "\t\nload nomePartida\n"      +
     "\t\nEXIT\n"        
 )
 }
+
 function creditos(){
     console.log("\n\nAutores e desenvolvedores:")
     console.log("\tDaniel e Luiz")
     console.log("\nCodico do jogo:")
     console.log("\nhttps://github.com/DanielVenturini/TAD-in-TypeScript") 
-    console.log("\n\nObrigado por zerar o jogo\n\n")
+    console.log("\n\nObrigado por jogar\n\n")
     console.log("\nFIM\n\n")
     
 }
 
 function printMensagem(pos){
     console.log(game.cenasJogo[pos])
+}
+
+function split(variavel){
+
+    var array = []
+
+    let pos = 0
+    let string = ""
+    for(i = 0; i < variavel.length; i ++){
+
+        if(variavel[i] == " " && i > 0){
+            array[pos] = string
+            pos ++
+            string = ""
+            continue
+        }
+
+        string += variavel[i]
+    }
+
+    array[pos] = string
+    return array
+}
+
+
+function inicializaGame(){
+    console.log("OPCOES:")
+    console.log("newgame")
+    console.log("load NOME_LOAD")
+
+    while(true){
+
+    let comandoUsuario = rl.prompt("\n\n> ")
+    let opc = split(comandoUsuario.toLowerCase())
+
+        switch(opc[0]){
+            case "newgame": {
+                try{
+                    return JSON.parse(fs.readFileSync('./src/game.json', 'utf8'))
+                } catch (e){
+                    console.log("Arquivo /src/game.json nao existe")
+                    jogo = false
+                }
+            }
+
+            case "load": {
+                try{
+                    return load(opc[1])
+                } catch (e) {
+                    console.log("Arquivo /src/save/" + opc[1] + " nao existe")
+                    continue
+                }
+            }
+
+            case "exit": {
+                jogo = false
+                creditos()
+                break
+            }
+
+            default: {
+                console.log("Comando invalido.")
+            }
+        }
+    }
+}
+
+function save(nameSave){
+    fs.writeFileSync('./src/save/' + nameSave, JSON.stringify(game))
+    console.log("Jogo salvo com sucesso em ./src/save/" + nameSave)
+}
+
+function load(nameLoad){
+    return JSON.parse(fs.readFileSync('./src/save/' + nameLoad, 'utf8'))
 }

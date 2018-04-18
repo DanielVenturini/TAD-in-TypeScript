@@ -7,7 +7,7 @@
 
         {   "id": 0,
             "title": "cena inicial",
-            "description": "\n\tEm sua expedição pelo Egito, o arqueólogo Indio Ana Jones, sem querer, caiu dentro de uma antiga tumba do faraó. Por ser arqueólogo, ele sabe que a única saída desta tumba é por cima. Então Indio Ana Jones terá que descobrir, dentre as várias caminhos da pirâmide, qual deles dão na saída. Por esquecer sua mochila no acampamento, Indio Ana Jones tem apenas em seus bolsos um ISQUEIRO, uma FACA, e um DICIONÁRIO de Egipcio/Portugues.\n\tO clima está frio e Indio Ana Jones está assustado, pois sabe que nesta pirâmide se encontra uma múmia real enterrada em seus caminhos. Observando ao redor, Indio Ana Jones consegue enxergar uma TOCHA, porém ela está apagada. Com muita sorte, apesar de estar trancado na pirâmide, Indio Ana Jones caiu em cima de uma barra de OURO. Na sala da pirâmide onde Indio Ana Jones está caído está muito Escuro, porém Indio Ana Jones consegue enxergar 2 saidas: a SAIDA1 ou SAIDA2",
+            "description": "\n\tEm sua expedição pelo Egito, o arqueólogo Indio Ana Jones, sem querer, caiu dentro de uma antiga tumba do faraó. Por ser arqueólogo, ele sabe que a única saída desta tumba é por cima. Então Indio Ana Jones terá que descobrir, dentre as várias caminhos da pirâmide, qual deles o levarão a saída. Por esquecer sua mochila no acampamento, Indio Ana Jones tem apenas em seus bolsos um ISQUEIRO, uma FACA, e um DICIONÁRIO de Egipcio/Portugues.\n\tO clima está frio e Indio Ana Jones está assustado, pois sabe que nesta pirâmide se encontra uma múmia real enterrada em alguma tumba. Observando ao redor, Indio Ana Jones consegue enxergar uma TOCHA, porém ela está apagada. Com muita sorte, apesar de estar trancado na pirâmide, Indio Ana Jones caiu em cima de uma barra de OURO. Na sala da pirâmide onde Indio Ana Jones está caído está muito Escuro, porém Indio Ana Jones consegue enxergar 2 saidas: a SAIDA1 ou SAIDA2",
             "object": ["tocha", "ouro", "mim"],
             "action":[],
             "resolved": [true, true, false],
@@ -34,7 +34,7 @@
 
         {   "id": 3,
             "title": "cena 3",
-            "description": "\n\tDepois de tanto andar, Indio Ana Jonas chega em mais uma camara. Nesta, ele observa caida no chao uma FLAUTA. Um pouco a frente, em cima de uma coluna de pedra, ele vê um JARRO de barro vazio, um pouco pesado. Logo a frente, ele vê uma saida, o caminho1",
+            "description": "\n\tDepois de tanto andar, Indio Ana Jonas chega em mais uma camara. Nesta, ele observa caida no chao uma FLAUTA. Um pouco a frente, em cima de uma coluna de pedra, ele vê um JARRO de barro vazio, um pouco pesado. Logo a frente, ele vê uma saida, o SAIDA1",
             "object": ["flauta", "jarro"],
             "action":[],
             "resolved": [true, true, false],
